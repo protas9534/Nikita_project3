@@ -1,0 +1,39 @@
+// для каждого компонента нужно импортить переменные, чтобы их использовать
+@import "../main/parameters";
+
+.footer-ico{
+    display: flex;
+}
+.footer__ico-block{
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid #F13C6E;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.footer__container{
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+.footer__address{
+    margin-left: auto;
+    font-size: 1.4rem;
+    line-height: 1.6rem;  
+}
+.footer__bottom{
+    background: $c-bg-gray;
+}
+.footer-bm__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+}
+.text{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #828282;
+}

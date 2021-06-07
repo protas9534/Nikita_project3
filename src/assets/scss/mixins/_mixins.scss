@@ -1,0 +1,13 @@
+@mixin btn {
+    display: inline-block;
+    font-size: 1.4rem;
+    border: 0.2rem solid;
+    border-radius: 4rem;
+    padding: 1rem 2.5rem;
+}
+@mixin title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 1.2rem;
+    color: #000000;
+}

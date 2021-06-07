@@ -1,0 +1,24 @@
+// Помощники
+@import 'mixins/mixins';//миксины scss
+@import 'main/stylesheet';// шрифты
+@import 'main/parameters';// переменные
+
+// Общее
+@import 'main/reset'; // сброс стилей для кроссбраузерности
+@import 'main/common'; // общие стили
+// @import 'main/grid'; // базовая 12ти колоночная сетка для сайта(сделана на основе bootstrap), классы .container/.row/.col-md-6 и т.д.
+
+// дальше можно писать все стили сайта в этот файл, или писать их в компонентах
+.container{
+    width: 100%;
+    max-width: 1140px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+@import 'components/header.scss';
+@import 'components/second.scss';
+@import 'components/menu.scss';
+@import 'components/baner.scss';
+@import 'components/form.scss';
+@import 'components/last.scss';
+@import 'components/footer.scss';

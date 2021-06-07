@@ -1,0 +1,31 @@
+@import '../main/parameters';
+@import '../mixins/mixins';
+
+.last {
+    border-bottom: 1px solid #EFEFEF;
+}
+.last__row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+}
+.last__title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    width: 10rem;
+    height: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+.last__rect {
+    border: 1px solid #EFEFEF;
+    width: 25.5rem;
+    margin-bottom: 3rem;
+}
+.last__item {
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+    color: #828282;
+
+}

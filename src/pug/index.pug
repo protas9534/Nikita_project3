@@ -1,0 +1,162 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Project_3
+        link(rel="stylesheet", href="./assets/css/app.css")
+    body.wrapper 
+        header.header 
+            nav.nav 
+                ul.nav__list
+                    li.nav__item 
+                        a(href="#").nav__link Доставка
+                    li.nav__item 
+                        a(href="#").nav__link Оплата
+                    li.nav__item 
+                        a(href="#").nav__link Отзывы
+                    li.nav__item 
+                        a(href="#").nav__link Вопрос-ответ
+                    li.nav__item 
+                        a(href="#").nav__link Контакты
+        header.header-midle 
+            .container 
+                .header-midle__iner
+                    a(href="index.html").logo
+                        img(src="assets/imgs/logo.svg", alt="beauty")
+                    form(action="#").search 
+                        input(type="text" value="").search__field
+                        button.search__btn 
+                            img(src="assets/imgs/search.svg", alt="search")
+                    a(href="tel%88121234567").contact-phone 8 (812) 123-45-67 
+                    button.btn.btn--border Обратный звонок
+        header.menu 
+            nav.nav 
+                ul.nav__list
+                    li.nav__item 
+                        a(href="#").nav__link Парикмахерская
+                    li.nav__item 
+                        a(href="#").nav__link Барбершоп
+                    li.nav__item 
+                        a(href="#").nav__link Маникюр
+                    li.nav__item 
+                        a(href="#").nav__link Педикюр
+                    li.nav__item 
+                        a(href="#").nav__link Массаж
+                    li.nav__item 
+                        a(href="#").nav__link Мебель
+        main.main 
+            section.baner 
+                .container.baner-container
+                    .baner__title Супер кресло
+                    .baner__text Текст акции всегда отражает суть, а не просто болтовню, поэтому внимательнее
+                    button.baner__btn Подробнее
+            section.second 
+                .container 
+                    .second__title Специальное предложение
+                    .second__row 
+                        mixin product(vimg, vtitle, vprice)
+                            .second__col 
+                                .product
+                                    .product__img 
+                                        img(src=vimg, alt="product")
+                                    .product__title=vtitle 
+                                    .product__price=vprice
+                                    .product__btn 
+                                        a(href="#").btn-link Купить
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+            section.forms 
+                .container.forms__container
+                    mixin form(ftitle, ftext, fimg, btmTrue)
+                        .form
+                            .form__left
+                                .form__title=ftitle
+                                .form__text=ftext
+                                .form__bottom
+                                    - if(btmTrue)
+                                        button.btn.form__btn Карта магазинов 
+                                    - else 
+                                        input(class="form__input" type="text" placeholder="Введите e-mail")
+                            .form__right 
+                                .form__img
+                                    img(src=fimg, alt="")
+                    +form('Получайте бонусы и подарки','Каждый месяц разыгрываем 10 000 рублей для наших клиентов','./assets/imgs/leater.svg', false)
+                    +form('Заходите к нам','Более 300 магазинов по всей России','./assets/imgs/car.svg', true)
+            section.impuls 
+                .container.impuls__container
+                    mixin impuls()
+                        .impuls__item
+                            img(src="././assets/imgs/impuls.png", alt="")
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+                    +impuls()
+            section.second 
+                .container 
+                    .second__title Вы недавно смотрели
+                    .second__row 
+                        mixin product(vimg, vtitle, vprice)
+                            .second__col 
+                                .product
+                                    .product__img 
+                                        img(src=vimg, alt="product")
+                                    .product__title=vtitle 
+                                    .product__price=vprice
+                                    .product__btn 
+                                        a(href="#").btn-link Купить
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+                        +product('./assets/imgs/product.jpg','Парикмахерское кресло «Норм» гидравлическое','9 900 ₽ ')
+            section.last 
+                .container 
+                    .last__row 
+                        mixin col()
+                            .last__col
+                                .last__title Популярные категории
+                                .last__rect 
+                                .last__item Насадки
+                                .last__item Инструменты
+                                .last__item Гель-лаки
+                                .last__item Дизайн
+                                .last__item Наращивание
+                                .last__item Оборудование
+                        +col()
+                        +col()
+                        +col()
+                        +col()                                 
+        footer.footer
+            .footer__top 
+                .container.footer__container
+                    .footer-ico
+                        a(href="index.html").ico-item
+                            .footer__ico-block
+                                img(src="assets/imgs/youtube.svg", alt="youtube")
+                        a(href="index.html").ico-item
+                            .footer__ico-block
+                                img(src="assets/imgs/vk.svg", alt="youtube")
+                        a(href="index.html").ico-item
+                            .footer__ico-block
+                                img(src="assets/imgs/instagram.svg", alt="youtube")
+                        a(href="index.html").ico-item
+                            .footer__ico-block
+                                img(src="assets/imgs/facebook-logo.svg", alt="youtube")
+                    .footer__address 198555, Невский пр. 140, офис 140
+                    a(href="tel%88121234567").contact-phone 8 (812) 123-45-67 
+                    button.btn.btn--border Обратный звонок
+            .footer__bottom 
+                .container.footer-bm__container
+                    .text Лучший магазин (с) 2019 Все права защищены. Интернет-магазин оборудования для салонов красоты
+                    .text Политика конфиденциальности

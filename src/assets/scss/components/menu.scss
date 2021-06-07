@@ -1,0 +1,18 @@
+@import '../main/parameters';
+
+
+.menu .nav{
+    
+    &__list{
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+    }
+    &__item{
+        margin: 0 2rem;
+
+    }
+    &__link{
+        font-size: 1.6rem;
+    }
+}
